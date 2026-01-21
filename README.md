@@ -21,6 +21,8 @@ ACUERDOS DE LABORATORIO
 ### Reto 1: Configuración y creación de rama
 **Evidencia:**
 ![alt text](image.png)
+
+
 Hicimos una configuracion previa para la creacion de los repositorios,luego clonamos el repositorio y creamos las rama develop y posteriormente se creo las diferentes ramas de los diferentes miembros del grupo y por ultimo se crearon las carpetas de los retos.
 
 
