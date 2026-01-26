@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import java.util.stream.IntStream;
 
 public class Reto3 {
@@ -10,3 +11,12 @@ public class Reto3 {
         return sb.toString().trim();
     }
 }
+=======
+public class Reto3 {
+
+    public static String mensajeReverse(String cadena) {
+        StringBuffer men = new StringBuffer(cadena);
+        return men.reverse().toString();
+    }
+} 
+>>>>>>> ba1c2e7e6d820f535002b0a714c8c5df87fb6479
