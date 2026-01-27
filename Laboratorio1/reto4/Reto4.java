@@ -1,34 +1,58 @@
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Reto4 {
 
-    public static HashMap<String, Integer> guardarEnHashMap(List<Map.Entry<String, Integer>> lista) {
 
-        HashMap<String, Integer> mapa = new HashMap<>();
+    public static HashMap<String, Integer> guardarEnHashMap(
+            List<Map.Entry<String, Integer>> lista) {
 
-        for (int i = 0; i < lista.size(); i++) {
-            String clave = lista.get(i).getKey();
-            Integer valor = lista.get(i).getValue();
-
-            if (!mapa.containsKey(clave)) {
-                mapa.put(clave, valor);
-            }
-        }
-
-        return mapa;
+        return lista.stream()
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (v1, v2) -> v1,
+                        HashMap::new
+                ));
     }
 
-    public static HashMap<String, Integer> combinar(HashMap<String, Integer> mapa, Hashtable<String, Integer> tabla) {
 
-        HashMap<String, Integer> resultado = new HashMap<>();
+    public static Hashtable<String, Integer> guardarEnHashTable(
+            List<Map.Entry<String, Integer>> lista) {
 
-        resultado.putAll(mapa);
-        resultado.putAll(tabla);
-
-        return resultado;
+        return lista.stream()
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (v1, v2) -> v1,
+                        Hashtable::new
+                ));
     }
 
+    public static Map<String, Integer> combinarYProcesar(
+            HashMap<String, Integer> hashMap,
+            Hashtable<String, Integer> hashTable) {
+
+        return Stream.concat(
+                        hashMap.entrySet().stream(),
+                        hashTable.entrySet().stream()
+                )
+
+                .map(e -> Map.entry(e.getKey().toUpperCase(), e.getValue()))
+                .sorted(Map.Entry.comparingByKey())
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (vMap, vTable) -> vTable,
+                        LinkedHashMap::new
+                ));
+    }
+    
+    public static void imprimir(Map<String, Integer> mapa) {
+        mapa.entrySet().stream()
+                .map(e -> e.getKey() + " -> " + e.getValue())
+                .forEach(System.out::println);
+    }
 }
-
