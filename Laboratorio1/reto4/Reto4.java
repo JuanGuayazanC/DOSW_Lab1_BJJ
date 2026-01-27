@@ -4,8 +4,7 @@ import java.util.Map;
 
 public class Reto4 {
 
-    public static HashMap<String, Integer> guardarEnHashMap(
-            List<Map.Entry<String, Integer>> lista) {
+    public static HashMap<String, Integer> guardarEnHashMap(List<Map.Entry<String, Integer>> lista) {
 
         HashMap<String, Integer> mapa = new HashMap<>();
 
@@ -20,5 +19,16 @@ public class Reto4 {
 
         return mapa;
     }
+
+    public static HashMap<String, Integer> combinar(HashMap<String, Integer> mapa, Hashtable<String, Integer> tabla) {
+
+        HashMap<String, Integer> resultado = new HashMap<>();
+
+        resultado.putAll(mapa);
+        resultado.putAll(tabla);
+
+        return resultado;
+    }
+
 }
 
