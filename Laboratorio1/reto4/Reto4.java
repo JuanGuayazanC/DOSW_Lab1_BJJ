@@ -4,30 +4,35 @@ import java.util.Map;
 
 public class Reto4 {
 
-    public static HashMap<String, Integer> guardarEnHashMap(List<Map.Entry<String, Integer>> lista) {
+    public static HashMap<String, Integer> guardarEnHashMap(
+            List<Map.Entry<String, Integer>> lista) {
 
-        HashMap<String, Integer> mapa = new HashMap<>();
-
-        for (int i = 0; i < lista.size(); i++) {
-            String clave = lista.get(i).getKey();
-            Integer valor = lista.get(i).getValue();
-
-            if (!mapa.containsKey(clave)) {
-                mapa.put(clave, valor);
-            }
-        }
-
-        return mapa;
+        return lista.stream()
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (v1, v2) -> v1,
+                        HashMap::new
+                ));
     }
 
-    public static HashMap<String, Integer> combinar(HashMap<String, Integer> mapa, Hashtable<String, Integer> tabla) {
+    public static Map<String, Integer> combinarYProcesar(
+            HashMap<String, Integer> hashMap,
+            Hashtable<String, Integer> hashTable) {
 
-        HashMap<String, Integer> resultado = new HashMap<>();
+        return Stream.concat(
+                        hashMap.entrySet().stream(),
+                        hashTable.entrySet().stream()
+                )
 
-        resultado.putAll(mapa);
-        resultado.putAll(tabla);
-
-        return resultado;
+                .map(e -> Map.entry(e.getKey().toUpperCase(), e.getValue()))
+                .sorted(Map.Entry.comparingByKey())
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (vMap, vTable) -> vTable,
+                        LinkedHashMap::new
+                ));
     }
 
 }
