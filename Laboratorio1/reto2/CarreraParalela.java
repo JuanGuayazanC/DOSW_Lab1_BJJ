@@ -13,6 +13,7 @@ public class Main {
         System.out.println("Cantidad: " + resultado.getCantidad());
         System.out.println("El máximo es multiplo de 2?: " + resultado.isMaximoEsMultiploDeDos());
         System.out.println("El máximo es divisor de 2?: " + resultado.isMaximoEsDivisorDeDos());
+        System.out.println("La cantidad de datos es impar?: " + resultado.isCantidadImpar());
     }
 
     public static ResultadoEstadistico calcularEstadisticas(List<Integer> numeros) {
@@ -29,15 +30,18 @@ public class Main {
 
         boolean esMultiploDeDos = (maximo % 2 == 0) ? true : false;
 
-        
         boolean esDivisorDeDos = (2 % maximo == 0) ? true : false;
+
+    
+        boolean cantidadEsImpar = (cantidad % 2 != 0) ? true : false;
 
         return new ResultadoEstadistico(
                 maximo,
                 minimo,
                 cantidad,
                 esMultiploDeDos,
-                esDivisorDeDos
+                esDivisorDeDos,
+                cantidadEsImpar
         );
     }
 }
@@ -50,15 +54,18 @@ class ResultadoEstadistico {
     private final long cantidad;
     private final boolean maximoEsMultiploDeDos;
     private final boolean maximoEsDivisorDeDos;
+    private final boolean cantidadImpar;
 
     public ResultadoEstadistico(int maximo, int minimo, long cantidad,
                                 boolean maximoEsMultiploDeDos,
-                                boolean maximoEsDivisorDeDos) {
+                                boolean maximoEsDivisorDeDos,
+                                boolean cantidadImpar) {
         this.maximo = maximo;
         this.minimo = minimo;
         this.cantidad = cantidad;
         this.maximoEsMultiploDeDos = maximoEsMultiploDeDos;
         this.maximoEsDivisorDeDos = maximoEsDivisorDeDos;
+        this.cantidadImpar = cantidadImpar;
     }
 
     public int getMaximo() {
@@ -79,5 +86,9 @@ class ResultadoEstadistico {
 
     public boolean isMaximoEsDivisorDeDos() {
         return maximoEsDivisorDeDos;
+    }
+
+    public boolean isCantidadImpar() {
+        return cantidadImpar;
     }
 }
