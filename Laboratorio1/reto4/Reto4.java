@@ -49,6 +49,8 @@ public class Reto4 {
                         LinkedHashMap::new
                 ));
     }
+
+
     
     public static void imprimir(Map<String, Integer> mapa) {
         mapa.entrySet().stream()
