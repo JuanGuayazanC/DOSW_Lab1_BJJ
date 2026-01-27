@@ -35,5 +35,12 @@ public class Reto4 {
                 ));
     }
 
+    public static void imprimirOrdenado(Map<String, Integer> mapa) {
+    mapa.keySet().stream()
+        .sorted()
+        .forEach(k -> System.out.println(k + " -> " + mapa.get(k)));
+}
+
+
 }
 
