@@ -4,19 +4,37 @@ public class Main {
 
     public static void main(String[] args) {
 
-        List<Integer> numeros = List.of(4, 9, 2, 15, 7);
+        List<Integer> lista1 = List.of(4, 9, 2, 15, 7);
+        List<Integer> lista2 = List.of(8, 6, 10, 12);
 
-        ResultadoEstadistico resultado = calcularEstadisticas(numeros);
+        Resultados resultados = calcularEstadisticas(lista1, lista2);
 
-        System.out.println("Maximo: " + resultado.getMaximo());
-        System.out.println("Minimo: " + resultado.getMinimo());
-        System.out.println("Cantidad: " + resultado.getCantidad());
-        System.out.println("El máximo es multiplo de 2?: " + resultado.isMaximoEsMultiploDeDos());
-        System.out.println("El máximo es divisor de 2?: " + resultado.isMaximoEsDivisorDeDos());
-        System.out.println("La cantidad de datos es impar?: " + resultado.isCantidadImpar());
+        System.out.println("===== LISTA 1 =====");
+        mostrarResultados(resultados.getResultadoLista1());
+
+        System.out.println("\n===== LISTA 2 =====");
+        mostrarResultados(resultados.getResultadoLista2());
     }
 
-    public static ResultadoEstadistico calcularEstadisticas(List<Integer> numeros) {
+    private static void mostrarResultados(ResultadoEstadistico r) {
+        System.out.println("Máximo: " + r.getMaximo());
+        System.out.println("Mínimo: " + r.getMinimo());
+        System.out.println("Cantidad de elementos: " + r.getCantidad());
+        System.out.println("¿Máximo múltiplo de 2?: " + r.isMaximoMultiploDeDos());
+        System.out.println("¿Máximo divisor de 2?: " + r.isMaximoDivisorDeDos());
+        System.out.println("¿Cantidad impar?: " + r.isCantidadImpar());
+    }
+
+    
+    public static Resultados calcularEstadisticas(List<Integer> lista1, List<Integer> lista2) {
+
+        ResultadoEstadistico resultado1 = calcularPorLista(lista1);
+        ResultadoEstadistico resultado2 = calcularPorLista(lista2);
+
+        return new Resultados(resultado1, resultado2);
+    }
+
+    private static ResultadoEstadistico calcularPorLista(List<Integer> numeros) {
 
         int maximo = numeros.stream()
                 .reduce((a, b) -> a > b ? a : b)
@@ -28,67 +46,37 @@ public class Main {
 
         long cantidad = numeros.stream().count();
 
-        boolean esMultiploDeDos = (maximo % 2 == 0) ? true : false;
-
-        boolean esDivisorDeDos = (2 % maximo == 0) ? true : false;
-
-    
-        boolean cantidadEsImpar = (cantidad % 2 != 0) ? true : false;
+        boolean maximoMultiploDeDos = (maximo % 2 == 0) ? true : false;
+        boolean maximoDivisorDeDos = (2 % maximo == 0) ? true : false;
+        boolean cantidadImpar = (cantidad % 2 != 0) ? true : false;
 
         return new ResultadoEstadistico(
                 maximo,
                 minimo,
                 cantidad,
-                esMultiploDeDos,
-                esDivisorDeDos,
-                cantidadEsImpar
+                maximoMultiploDeDos,
+                maximoDivisorDeDos,
+                cantidadImpar
         );
     }
 }
 
 
-class ResultadoEstadistico {
+class Resultados {
 
-    private final int maximo;
-    private final int minimo;
-    private final long cantidad;
-    private final boolean maximoEsMultiploDeDos;
-    private final boolean maximoEsDivisorDeDos;
-    private final boolean cantidadImpar;
+    private final ResultadoEstadistico resultadoLista1;
+    private final ResultadoEstadistico resultadoLista2;
 
-    public ResultadoEstadistico(int maximo, int minimo, long cantidad,
-                                boolean maximoEsMultiploDeDos,
-                                boolean maximoEsDivisorDeDos,
-                                boolean cantidadImpar) {
-        this.maximo = maximo;
-        this.minimo = minimo;
-        this.cantidad = cantidad;
-        this.maximoEsMultiploDeDos = maximoEsMultiploDeDos;
-        this.maximoEsDivisorDeDos = maximoEsDivisorDeDos;
-        this.cantidadImpar = cantidadImpar;
+    public Resultados(ResultadoEstadistico resultadoLista1, ResultadoEstadistico resultadoLista2) {
+        this.resultadoLista1 = resultadoLista1;
+        this.resultadoLista2 = resultadoLista2;
     }
 
-    public int getMaximo() {
-        return maximo;
+    public ResultadoEstadistico getResultadoLista1() {
+        return resultadoLista1;
     }
 
-    public int getMinimo() {
-        return minimo;
-    }
-
-    public long getCantidad() {
-        return cantidad;
-    }
-
-    public boolean isMaximoEsMultiploDeDos() {
-        return maximoEsMultiploDeDos;
-    }
-
-    public boolean isMaximoEsDivisorDeDos() {
-        return maximoEsDivisorDeDos;
-    }
-
-    public boolean isCantidadImpar() {
-        return cantidadImpar;
+    public ResultadoEstadistico getResultadoLista2() {
+        return resultadoLista2;
     }
 }
