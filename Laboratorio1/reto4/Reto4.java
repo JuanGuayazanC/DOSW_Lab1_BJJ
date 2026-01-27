@@ -1,17 +1,24 @@
-public static HashMap<String, Integer> guardarEnHashMap(
-        List<Map.Entry<String, Integer>> lista) {
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-    HashMap<String, Integer> mapa = new HashMap<>();
+public class Reto4 {
 
-    for (int i = 0; i < lista.size(); i++) {
-        String clave = lista.get(i).getKey();
-        Integer valor = lista.get(i).getValue();
+    public static HashMap<String, Integer> guardarEnHashMap(
+            List<Map.Entry<String, Integer>> lista) {
 
-        if (!mapa.containsKey(clave)) {
-            mapa.put(clave, valor);
+        HashMap<String, Integer> mapa = new HashMap<>();
+
+        for (int i = 0; i < lista.size(); i++) {
+            String clave = lista.get(i).getKey();
+            Integer valor = lista.get(i).getValue();
+
+            if (!mapa.containsKey(clave)) {
+                mapa.put(clave, valor);
+            }
         }
-    }
 
-    return mapa;
+        return mapa;
+    }
 }
- 
+
