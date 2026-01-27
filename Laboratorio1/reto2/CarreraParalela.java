@@ -8,10 +8,11 @@ public class Main {
 
         ResultadoEstadistico resultado = calcularEstadisticas(numeros);
 
-        System.out.println("Maximo: " + resultado.getMaximo());
-        System.out.println("Minimo: " + resultado.getMinimo());
+        System.out.println("Máximo: " + resultado.getMaximo());
+        System.out.println("Mínimo: " + resultado.getMinimo());
         System.out.println("Cantidad: " + resultado.getCantidad());
-        System.out.println("El máximo es multiplo de 2?: " + resultado.isMaximoEsMultiploDeDos());
+        System.out.println("¿El máximo es múltiplo de 2?: " + resultado.isMaximoEsMultiploDeDos());
+        System.out.println("¿La cantidad de datos es par?: " + resultado.isCantidadPar());
     }
 
 
@@ -28,9 +29,16 @@ public class Main {
         long cantidad = numeros.stream().count();
 
 
-        boolean esMultiploDeDos = (maximo % 2 == 0) ? true : false;
+        boolean maximoEsMultiploDeDos = (maximo % 2 == 0) ? true : false;
+        boolean cantidadEsPar = (cantidad % 2 == 0) ? true : false;
 
-        return new ResultadoEstadistico(maximo, minimo, cantidad, esMultiploDeDos);
+        return new ResultadoEstadistico(
+                maximo,
+                minimo,
+                cantidad,
+                maximoEsMultiploDeDos,
+                cantidadEsPar
+        );
     }
 }
 
@@ -41,12 +49,18 @@ class ResultadoEstadistico {
     private final int minimo;
     private final long cantidad;
     private final boolean maximoEsMultiploDeDos;
+    private final boolean cantidadPar;
 
-    public ResultadoEstadistico(int maximo, int minimo, long cantidad, boolean maximoEsMultiploDeDos) {
+    public ResultadoEstadistico(int maximo,
+                                int minimo,
+                                long cantidad,
+                                boolean maximoEsMultiploDeDos,
+                                boolean cantidadPar) {
         this.maximo = maximo;
         this.minimo = minimo;
         this.cantidad = cantidad;
         this.maximoEsMultiploDeDos = maximoEsMultiploDeDos;
+        this.cantidadPar = cantidadPar;
     }
 
     public int getMaximo() {
@@ -63,6 +77,10 @@ class ResultadoEstadistico {
 
     public boolean isMaximoEsMultiploDeDos() {
         return maximoEsMultiploDeDos;
+    }
+
+    public boolean isCantidadPar() {
+        return cantidadPar;
     }
 }
 
