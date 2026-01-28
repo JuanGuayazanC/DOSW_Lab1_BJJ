@@ -1,8 +1,9 @@
-<<<<<<< HEAD
+
 import java.util.stream.IntStream;
 
 public class Reto3 {
 
+    // Repite el mensaje 3 veces
     public static String mensaje(String cadena) {
         StringBuilder sb = new StringBuilder();
 
@@ -10,13 +11,10 @@ public class Reto3 {
                 .forEach(i -> sb.append(cadena).append(" "));
         return sb.toString().trim();
     }
-}
-=======
-public class Reto3 {
 
+    // Invierte el mensaje
     public static String mensajeReverse(String cadena) {
         StringBuffer men = new StringBuffer(cadena);
         return men.reverse().toString();
     }
-} 
->>>>>>> ba1c2e7e6d820f535002b0a714c8c5df87fb6479
+}
