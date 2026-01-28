@@ -39,3 +39,13 @@ Reto 2:  Carrera en Paralelo
 <img width="952" height="44" alt="image" src="https://github.com/user-attachments/assets/695b0438-2849-491b-901c-c274546ace97" />
 
 
+3. se solucionaron los conflictos 
+
+<img width="995" height="453" alt="image" src="https://github.com/user-attachments/assets/85335323-7ee6-4091-9e04-98a49786e5c7" />
+
+
+4. se hicieron los cambios en los dos carriles y luego se hizo un merge para combinarlo finalmente 
+
+
+<img width="1358" height="756" alt="image" src="https://github.com/user-attachments/assets/851ed27e-2937-4cc5-a703-94ee38e323aa" />
+
