@@ -46,3 +46,19 @@ En esta imagen se puede apreciar la solucion de los conflictos.
 
 
 
+
+## Parte 3
+## Reto 1: La Bienvenida
+
+<img width="937" height="489" alt="image" src="https://github.com/user-attachments/assets/4a3d9b1e-43a2-47af-85a4-f4018b81a577" />
+
+
+se creo la rama para el reto se realizo el codigo que nos pedia este reto.
+
+<img width="940" height="346" alt="image" src="https://github.com/user-attachments/assets/02899a82-a3a5-42cd-9254-ce4e98c3564e" />
+
+se realizo el debido proceso para poder subirlo al gitHub
+
+
+
+
