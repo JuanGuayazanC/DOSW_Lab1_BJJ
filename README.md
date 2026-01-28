@@ -185,9 +185,3 @@ Se integraron los comandos implementados en ramas independientes mediante un mer
 
 12. **¿Por qué usar ramas feature/ y no main?**  
     Permite trabajo paralelo y mantiene main estable.
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 7e11e73c625d1e2669538def7b9dd937179e0e12
