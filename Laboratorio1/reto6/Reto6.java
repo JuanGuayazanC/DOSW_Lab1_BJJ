@@ -1,21 +1,47 @@
-public class Reto6 {
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class Reto6B {
+
+    static Map<String, Runnable> comandos = new HashMap<>();
+
+    static {
+        comandos.put("BROMEAR", () -> System.out.println("La máquina ríe: \"¿Por qué la RAM rompió con la CPU? Porque necesitaba espacio…\""));
+        comandos.put("GRITAR", () -> System.out.println("La máquina grita: \"¡¡¡ALERTA DE STACK OVERFLOW!!!\""));
+        comandos.put("SUSURRAR", () -> System.out.println("La máquina susurra: \"Shhh… los bugs están dormidos\""));
+        comandos.put("ANALIZAR", () -> System.out.println("La máquina procesa: \"Analizando datos… resultado: ¡Eres increíble programando!\""));
+    }
 
     public static void ejecutarComando(String comando) {
+        Runnable accion = comandos.get(comando);
+        if (accion != null) accion.run();
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese un comando (BROMEAR, GRITAR, SUSURRAR, ANALIZAR):");
+        String comando = scanner.nextLine().toUpperCase();
+
         switch (comando) {
             case "BROMEAR":
-                System.out.println("¿Por qué la RAM rompió con la CPU? Porque necesitaba espacio…");
+                ejecutarComando("BROMEAR");
                 break;
             case "GRITAR":
-                System.out.println("¡¡¡ALERTA DE STACK OVERFLOW!!!");
+                ejecutarComando("GRITAR");
                 break;
             case "SUSURRAR":
-                System.out.println("Shhh… los bugs están dormidos");
+                ejecutarComando("SUSURRAR");
                 break;
             case "ANALIZAR":
-                System.out.println("Analizando datos… resultado: ¡Eres increíble programando!");
+                ejecutarComando("ANALIZAR");
                 break;
             default:
                 System.out.println("Comando no reconocido.");
+                break;
         }
+        scanner.close();
     }
-} 
+}
+
