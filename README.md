@@ -27,8 +27,8 @@ Hicimos una configuracion previa para la creacion de los repositorios,luego clon
 
 
 
-Parte 3
-Reto 1: La Bienvenida
+## Parte 3
+## Reto 1: La Bienvenida
 
 <img width="937" height="489" alt="image" src="https://github.com/user-attachments/assets/4a3d9b1e-43a2-47af-85a4-f4018b81a577" />
 
