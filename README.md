@@ -25,4 +25,17 @@ ACUERDOS DE LABORATORIO
 
 Hicimos una configuracion previa para la creacion de los repositorios,luego clonamos el repositorio y creamos las rama develop y posteriormente se creo las diferentes ramas de los diferentes miembros del grupo y por ultimo se crearon las carpetas de los retos.
 
+Parte 3
+Reto 1: La Bienvenida
+
+<img width="940" height="346" alt="image" src="https://github.com/user-attachments/assets/06e574bc-6dca-45bd-9b6e-de7a640e00fa" />
+
+se creo la rama para el reto se realizo el codigo que nos pedia este reto.
+
+<img width="940" height="346" alt="image" src="https://github.com/user-attachments/assets/02899a82-a3a5-42cd-9254-ce4e98c3564e" />
+
+se realizo el debido proceso para poder subirlo al gitHub
+
+
+
 
