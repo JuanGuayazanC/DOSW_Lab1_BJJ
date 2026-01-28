@@ -30,7 +30,8 @@ Hicimos una configuracion previa para la creacion de los repositorios,luego clon
 Parte 3
 Reto 1: La Bienvenida
 
-<img width="940" height="346" alt="image" src="https://github.com/user-attachments/assets/06e574bc-6dca-45bd-9b6e-de7a640e00fa" />
+<img width="937" height="489" alt="image" src="https://github.com/user-attachments/assets/4a3d9b1e-43a2-47af-85a4-f4018b81a577" />
+
 
 se creo la rama para el reto se realizo el codigo que nos pedia este reto.
 
