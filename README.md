@@ -81,6 +81,7 @@ Posteriormente, cada integrante realizó el merge de sus subramas hacia la rama 
 
 <img width="954" height="352" alt="image" src="https://github.com/user-attachments/assets/7a47f93e-bb38-4efd-845a-6e6b00565213" />
 
+<<<<<<< HEAD
 
 
 ## RETO #4: El tesoro de las llaves duplicadas
@@ -118,16 +119,26 @@ hay comflicto y lo procedemos a solucionarlo
 
 <img width="1146" height="492" alt="imagen (4)" src="https://github.com/user-attachments/assets/a57a348d-dbde-4420-895c-21c528de2d50" />
 
+=======
+>>>>>>> 7e11e73c625d1e2669538def7b9dd937179e0e12
 ### Reto 6: La máquina de decisiones
 
 <img width="1250" height="953" alt="image" src="https://github.com/user-attachments/assets/291640cb-9f33-439c-8ea6-c79bd157c660" />
 <img width="1229" height="972" alt="image" src="https://github.com/user-attachments/assets/580636f4-d3ea-47f1-8e3e-12bca7dfc410" />
 <img width="1093" height="347" alt="image" src="https://github.com/user-attachments/assets/ce5b7f9f-7bf2-4538-a5cc-aa2ffc78717b" />
+<<<<<<< HEAD
 <img width="1460" height="267" alt="image" src="https://github.com/user-attachments/assets/5af583b2-c6a5-48ea-a80e-42385d4d51c2" />
 Se integraron los comandos implementados en ramas independientes mediante un merge que presentó conflictos, los cuales fueron resueltos manualmente. El resultado se consolidó en un commit de merge y se refactorizó la solución usando un Map<String, Runnable> con lambdas para ejecutar los comandos, verificando su correcto funcionamiento.
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<img width="1460" height="267" alt="image" src="https://github.com/user-attachments/assets/5af583b2-c6a5-48ea-a80e-42385d4d51c2" />
+Se integraron los comandos implementados en ramas independientes mediante un merge que presentó conflictos, los cuales fueron resueltos manualmente. El resultado se consolidó en un commit de merge y se refactorizó la solución usando un Map<String, Runnable> con lambdas para ejecutar los comandos, verificando su correcto funcionamiento.
+
+>>>>>>> 7e11e73c625d1e2669538def7b9dd937179e0e12
 ---
 
 ## Cuestionario
@@ -174,6 +185,9 @@ Se integraron los comandos implementados en ramas independientes mediante un mer
 
 12. **¿Por qué usar ramas feature/ y no main?**  
     Permite trabajo paralelo y mantiene main estable.
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 7e11e73c625d1e2669538def7b9dd937179e0e12
