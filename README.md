@@ -25,4 +25,12 @@ ACUERDOS DE LABORATORIO
 
 Hicimos una configuracion previa para la creacion de los repositorios,luego clonamos el repositorio y creamos las rama develop y posteriormente se creo las diferentes ramas de los diferentes miembros del grupo y por ultimo se crearon las carpetas de los retos.
 
+### RETO #6: La máquina de decisiones
+
+
+<img width="1250" height="953" alt="image" src="https://github.com/user-attachments/assets/291640cb-9f33-439c-8ea6-c79bd157c660" />
+<img width="1229" height="972" alt="image" src="https://github.com/user-attachments/assets/580636f4-d3ea-47f1-8e3e-12bca7dfc410" />
+<img width="1093" height="347" alt="image" src="https://github.com/user-attachments/assets/ce5b7f9f-7bf2-4538-a5cc-aa2ffc78717b" />
+
+
 
