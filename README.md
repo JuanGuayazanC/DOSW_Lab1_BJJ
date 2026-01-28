@@ -1,4 +1,4 @@
-# DOSW_Lab1_BJJ
+# LABORATORIO 1: INTRODUCCIÓN A GIT Y PROGRAMACIÓN FUNCIONAL
 
 ## ACUERDOS DE LABORATORIO
 1. Habrá un grupo en WhatsApp.
@@ -81,9 +81,6 @@ Posteriormente, cada integrante realizó el merge de sus subramas hacia la rama 
 
 <img width="954" height="352" alt="image" src="https://github.com/user-attachments/assets/7a47f93e-bb38-4efd-845a-6e6b00565213" />
 
-<<<<<<< HEAD
-
-
 ## RETO #4: El tesoro de las llaves duplicadas
 
 Se implementaron en ramas independientes los métodos para almacenar pares clave-valor utilizando HashMap y Hashtable, manejando claves duplicadas según los requisitos. Posteriormente, se realizó la unificación de ambas implementaciones mediante un merge que presentó conflictos, los cuales fueron resueltos manualmente. La solución final combina ambos mapas priorizando los valores del Hashtable, convierte las claves a mayúsculas y las imprime en orden ascendente utilizando streams, expresiones lambda y Collectors.toMap().
@@ -130,15 +127,6 @@ hay comflicto y lo procedemos a solucionarlo
 <img width="1460" height="267" alt="image" src="https://github.com/user-attachments/assets/5af583b2-c6a5-48ea-a80e-42385d4d51c2" />
 Se integraron los comandos implementados en ramas independientes mediante un merge que presentó conflictos, los cuales fueron resueltos manualmente. El resultado se consolidó en un commit de merge y se refactorizó la solución usando un Map<String, Runnable> con lambdas para ejecutar los comandos, verificando su correcto funcionamiento.
 
-
-
-=======
-<<<<<<< HEAD
-=======
-<img width="1460" height="267" alt="image" src="https://github.com/user-attachments/assets/5af583b2-c6a5-48ea-a80e-42385d4d51c2" />
-Se integraron los comandos implementados en ramas independientes mediante un merge que presentó conflictos, los cuales fueron resueltos manualmente. El resultado se consolidó en un commit de merge y se refactorizó la solución usando un Map<String, Runnable> con lambdas para ejecutar los comandos, verificando su correcto funcionamiento.
-
->>>>>>> 7e11e73c625d1e2669538def7b9dd937179e0e12
 ---
 
 ## Cuestionario
