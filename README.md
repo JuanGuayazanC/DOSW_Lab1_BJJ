@@ -29,6 +29,7 @@ Se realizó una configuración previa para la creación de los repositorios, lue
 
 ---
 
+<<<<<<< HEAD
 ## Parte 3
 
 ### Reto 1: La Bienvenida
@@ -84,4 +85,13 @@ Posteriormente, cada integrante realizó el merge de sus subramas hacia la rama 
 <img width="954" height="352" alt="image" src="https://github.com/user-attachments/assets/7a47f93e-bb38-4efd-845a-6e6b00565213" />
 
 En esta imagen se puede apreciar la solución de los conflictos.
+
+### RETO #6: La máquina de decisiones
+
+
+<img width="1250" height="953" alt="image" src="https://github.com/user-attachments/assets/291640cb-9f33-439c-8ea6-c79bd157c660" />
+<img width="1229" height="972" alt="image" src="https://github.com/user-attachments/assets/580636f4-d3ea-47f1-8e3e-12bca7dfc410" />
+<img width="1093" height="347" alt="image" src="https://github.com/user-attachments/assets/ce5b7f9f-7bf2-4538-a5cc-aa2ffc78717b" />
+
+
 

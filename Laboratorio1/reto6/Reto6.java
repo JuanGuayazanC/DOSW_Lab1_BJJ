@@ -1,25 +1,65 @@
+package edu.dosw.lab.solid;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 
 public class Reto6 {
 
+    static Map<String, Runnable> comandos = new HashMap<>();
+
+    static {
+        // Comandos Estudiante A
+        comandos.put("SALUDAR", () ->
+                System.out.println("La máquina dice: ¡Saludos, viajero del tiempo y del código!"));
+        comandos.put("DESPEDIR", () ->
+                System.out.println("La máquina dice: Que los bits te acompañen, hasta la próxima misión."));
+        comandos.put("CANTAR", () ->
+                System.out.println("La máquina canta: 01010101"));
+        comandos.put("DANZAR", () ->
+                System.out.println("La máquina gira y emite chispas: Girando en modo fiesta."));
+
+        // Comandos Estudiante B
+        comandos.put("BROMEAR", () ->
+                System.out.println("La máquina ríe: ¿Por qué la RAM rompió con la CPU? Porque necesitaba espacio…"));
+        comandos.put("GRITAR", () ->
+                System.out.println("La máquina grita: ¡¡¡ALERTA DE STACK OVERFLOW!!!"));
+        comandos.put("SUSURRAR", () ->
+                System.out.println("La máquina susurra: Shhh… los bugs están dormidos"));
+        comandos.put("ANALIZAR", () ->
+                System.out.println("La máquina procesa: Analizando datos… resultado: ¡Eres increíble programando!"));
+    }
+
     public static void ejecutarComando(String comando) {
+        Runnable accion = comandos.get(comando);
+        if (accion != null) {
+            accion.run();
+        } else {
+            System.out.println("Comando no reconocido.");
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingrese un comando:");
+        String comando = scanner.nextLine().toUpperCase();
+
         switch (comando) {
+            case "SALUDAR":
+            case "DESPEDIR":
+            case "CANTAR":
+            case "DANZAR":
             case "BROMEAR":
-                System.out.println("¿Por qué la RAM rompió con la CPU? Porque necesitaba espacio…");
-                break;
             case "GRITAR":
-                System.out.println("¡¡¡ALERTA DE STACK OVERFLOW!!!");
-                break;
             case "SUSURRAR":
-                System.out.println("Shhh… los bugs están dormidos");
-                break;
             case "ANALIZAR":
-                System.out.println("Analizando datos… resultado: ¡Eres increíble programando!");
+                ejecutarComando(comando);
                 break;
             default:
                 System.out.println("Comando no reconocido.");
         }
+
+        scanner.close();
     }
 }
-
-
