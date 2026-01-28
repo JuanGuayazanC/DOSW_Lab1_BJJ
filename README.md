@@ -140,6 +140,9 @@ Posteriormente, cada integrante realizó el merge de sus subramas hacia la rama 
 <img width="1460" height="267" alt="image" src="https://github.com/user-attachments/assets/5af583b2-c6a5-48ea-a80e-42385d4d51c2" />
 Se integraron los comandos implementados en ramas independientes mediante un merge que presentó conflictos, los cuales fueron resueltos manualmente. El resultado se consolidó en un commit de merge y se refactorizó la solución usando un Map<String, Runnable> con lambdas para ejecutar los comandos, verificando su correcto funcionamiento.
 
+## RETO #4: El tesoro de las llaves duplicadas
+
+Se implementaron en ramas independientes los métodos para almacenar pares clave-valor utilizando HashMap y Hashtable, manejando claves duplicadas según los requisitos. Posteriormente, se realizó la unificación de ambas implementaciones mediante un merge que presentó conflictos, los cuales fueron resueltos manualmente. La solución final combina ambos mapas priorizando los valores del Hashtable, convierte las claves a mayúsculas y las imprime en orden ascendente utilizando streams, expresiones lambda y Collectors.toMap().
 
 
 >>>>>>> 0959b1492cd0ec096f8ef7cdb7a7cd8b7853d0d0
