@@ -6,6 +6,8 @@ import java.util.stream.Stream;
 public class Reto4 {
 
 
+
+    
     public static HashMap<String, Integer> guardarEnHashMap(
             List<Map.Entry<String, Integer>> lista) {
 
