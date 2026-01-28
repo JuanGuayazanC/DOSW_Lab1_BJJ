@@ -25,8 +25,8 @@ ACUERDOS DE LABORATORIO
 
 Hicimos una configuracion previa para la creacion de los repositorios,luego clonamos el repositorio y creamos las rama develop y posteriormente se creo las diferentes ramas de los diferentes miembros del grupo y por ultimo se crearon las carpetas de los retos.
 
-Parte 3
-Reto 2:  Carrera en Paralelo
+##Parte 3
+##Reto 2:  Carrera en Paralelo
 
 1. se realizo el cambio de nombre de la rama
 
