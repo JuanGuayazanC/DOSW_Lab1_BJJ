@@ -71,9 +71,7 @@ Finalmente, se realizó el proceso necesario para subir los cambios a GitHub.
 
 Primero se creó la rama correspondiente al reto número 3 y posteriormente las dos subramas solicitadas para el desarrollo del reto.
 
-Luego, cada integrante realizó la implementación de los métodos que le correspondían.
-
-Después, cada uno realizó su respectivo commit.
+Luego, cada integrante realizó la implementación de los métodos que le correspondían y su respectivo commit.
 
 <img width="960" height="281" alt="image" src="https://github.com/user-attachments/assets/839cdd21-85e8-485e-829e-2ad34ed8ce7c" />
 
@@ -83,52 +81,57 @@ Posteriormente, cada integrante realizó el merge de sus subramas hacia la rama 
 
 <img width="954" height="352" alt="image" src="https://github.com/user-attachments/assets/7a47f93e-bb38-4efd-845a-6e6b00565213" />
 
-En esta imagen se puede apreciar la solución de los conflictos.
+---
 
+## Cuestionario
 
-## cuestionario
+1. **¿Cuál es la diferencia entre git merge y git rebase?**  
+   git merge une dos ramas creando un commit de merge y conserva el historial.  
+   git rebase reorganiza los commits dejando un historial más lineal.
 
-1. ¿Cuál es la diferencia entre git merge y git rebase?
-git merge une dos ramas creando un commit de merge y conserva el historial tal como ocurrio.
-git rebase reorganiza los commits de una rama sobre otra dejando un historial más lineal y mas limpio.
-2. Si dos ramas modifican la misma línea de un archivo, ¿qué sucede al hacer merge?
-Git genera un conflicto, se detiene el merge y te pide resolver manualmente cual cambio conservar o cómo combinarlos.
-3. ¿Cómo puedes ver gráficamente el historial de merges y ramas en consola?
-git log --oneline --graph --all
-4. Explica la diferencia entre un commit y un push.
-commit guarda cambios localmente en tu repositorio.
-push esos commits al repositorio remoto.
-5. ¿Para qué sirven git stash y git pop?
-git stash guarda cambios temporales sin hacer commit.
-git pop recupera esos cambios guardados.
-6. ¿Qué diferencia hay entre HashMap y Hashtable?
-HashMap no es sincronizado, es más rápido y permite null.
-Hashtable es sincronizado (thread-safe), más antiguo y no permite null.
+2. **Si dos ramas modifican la misma línea de un archivo, ¿qué sucede al hacer merge?**  
+   Git genera un conflicto que debe resolverse manualmente.
 
-7. ¿Qué ventajas tiene Collectors.toMap() frente a un bucle tradicional?
-Código más limpio y corto
-Estilo funcional
-Menos errores y mejor legibilidad
+3. **¿Cómo puedes ver gráficamente el historial de merges y ramas en consola?**  
+   `git log --oneline --graph --all`
 
-8. Si usas List con objetos y luego aplicas stream().map(), ¿qué tipo de operación estás haciendo?
-Es una operación intermedia de transformación, porque convierte cada elemento en otro tipo.
+4. **Explica la diferencia entre un commit y un push.**  
+   commit guarda cambios localmente.  
+   push envía los commits al repositorio remoto.
 
-9. ¿Qué hace el método stream().filter() y qué retorna?
-Filtra elementos según una condición y retorna un Stream, no una lista.
+5. **¿Para qué sirven git stash y git pop?**  
+   git stash guarda cambios temporales.  
+   git pop los recupera.
 
-10. Paso a paso para crear una rama desde develop para una funcionalidad nueva:
-Cambia a develop: git checkout develop
-Actualizar develop: git pull
-Crear la nueva rama:git checkout -b feature/nueva_funcionalidad
+6. **¿Qué diferencia hay entre HashMap y Hashtable?**  
+   HashMap no es sincronizado y permite null.  
+   Hashtable es sincronizado y no permite null.
 
-11. ¿Diferencia entre git branch y git checkout -b?
-git branch nombre solo crea la rama.
-git checkout -b nombre crea y se cambia a la rama.
+7. **¿Qué ventajas tiene Collectors.toMap()?**  
+   Código más limpio, estilo funcional y mejor legibilidad.
 
-12. ¿Por qué usar ramas feature/ y no trabajar directo en main?
-Evita errores en producción
-Permite trabajar en paralelo
-Facilita pruebas y revisiones
-Mantiene main estable
+8. **Si usas List y aplicas stream().map(), ¿qué operación es?**  
+   Una operación intermedia de transformación.
 
+9. **¿Qué hace stream().filter() y qué retorna?**  
+   Filtra elementos y retorna un Stream.
 
+10. **Pasos para crear una rama desde develop:**
+    - `git checkout develop`
+    - `git pull`
+    - `git checkout -b feature/nueva_funcionalidad`
+
+11. **Diferencia entre git branch y git checkout -b:**  
+    git branch solo crea la rama.  
+    git checkout -b crea y cambia a la rama.
+
+12. **¿Por qué usar ramas feature/ y no main?**  
+    Permite trabajo paralelo y mantiene main estable.
+
+---
+
+### Reto 6: La máquina de decisiones
+
+<img width="1250" height="953" alt="image" src="https://github.com/user-attachments/assets/291640cb-9f33-439c-8ea6-c79bd157c660" />
+<img width="1229" height="972" alt="image" src="https://github.com/user-attachments/assets/580636f4-d3ea-47f1-8e3e-12bca7dfc410" />
+<img width="1093" height="347" alt="image" src="https://github.com/user-attachments/assets/ce5b7f9f-7bf2-4538-a5cc-aa2ffc78717b" />
