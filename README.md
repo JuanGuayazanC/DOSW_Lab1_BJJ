@@ -32,3 +32,10 @@ Reto 2:  Carrera en Paralelo
 
 <img width="950" height="393" alt="image" src="https://github.com/user-attachments/assets/99374ffa-3281-4c27-8544-b847a02c415d" />
 
+2. se creo la rama de los carriles de cada estudiante
+
+<img width="1550" height="335" alt="image" src="https://github.com/user-attachments/assets/1314637e-74f3-42ae-9d3f-33d90fe1c8d1" />
+
+<img width="952" height="44" alt="image" src="https://github.com/user-attachments/assets/695b0438-2849-491b-901c-c274546ace97" />
+
+
